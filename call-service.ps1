@@ -7,11 +7,15 @@ while ($true) {
      
     
 
-    if ($responseVersion -eq 1) { 
-        Write-Host "version=" $responseVersion  ", code="  $responseCode -ForegroundColor Green  
-    }  ElseIf ($responseVersion -eq 2) { 
+    if ($responseVersion -eq 0) { 
+        Write-Host "version=" $responseVersion  ", code="  $responseCode -ForegroundColor White  
+    }  ElseIf ($responseVersion -eq 1) { 
          Write-Host "version=" $responseVersion  ", code="  $responseCode -ForegroundColor Yellow
-    } else {
+    }  ElseIf ($responseVersion -eq 2) { 
+         Write-Host "version=" $responseVersion  ", code="  $responseCode -ForegroundColor Blue
+    }  ElseIf ($responseVersion -eq 3) { 
+         Write-Host "version=" $responseVersion  ", code="  $responseCode -ForegroundColor Green
+    }  else {
          Write-Host "version=" $responseVersion  ", code="  $responseCode  -ForegroundColor Red
     } 
     Start-Sleep -Milliseconds 500
