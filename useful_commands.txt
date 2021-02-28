@@ -1,0 +1,4 @@
+docker build -t vitshevl/proxy-service:1.0.0 -f Dockerfile .
+docker push vitshevl/health-service:2.0.0 
+kubectl apply -f .\rolling-update-manifest.yaml
+kubectl port-forward svc/proxy-service 8080:8080
