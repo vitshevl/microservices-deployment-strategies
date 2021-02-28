@@ -1,0 +1,6 @@
+server:
+  port : 8080
+
+test-properties:
+  version: ${VERSION:1}
+

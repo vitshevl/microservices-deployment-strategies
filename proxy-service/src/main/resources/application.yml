@@ -1,0 +1,14 @@
+server:
+  port : 8080
+
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enable: false
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 500
